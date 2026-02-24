@@ -4,355 +4,450 @@
     "source": "World Health Organization (WHO)",
     "title": "Diabetes \u2013 Key Facts and Prevention",
     "original_word_count": 605,
-    "summary": "Diabetes is a disease where the body can't use sugar properly because it either doesn't make enough insulin or uses what there is wrongly, and this leads to high blood sugar levels called hyperglycaemia. This condition affects many people around the world causing damage mainly in nerves and vessels over time if not managed well. In 2014, about one eighth of adults had diabetes which led to nearly two million deaths directly from it by 2019 with most happening before age seventy-five. Diabetes also causes kidney disease deaths and contributes significantly to heart diseases leading to blindness in some cases too, especially affecting the eyes called retinopathy which can lead to not being able to see well or at all due to diabetes complications worldwide.\n\nType 2 is most common form of this disease often linked with obesity and lack of exercise while Type 1 happens when pancreas fails in insulin production, mostly affecting children but can also happen later on as adults need their own insulin too. Good control through diet, activity, medication if needed, regular check-ups for complications are key to living with this disease and avoid serious problems like heart attacks or strokes that come along due to it in people who already have the condition.",
-    "summary_word_count": 209,
-    "fkgl": 17.3,
-    "fre": 33.0,
+    "raw_summary": "Diabetes is a sickness where the body can't use sugar rightly in our blood, which comes from food we eat and drinks like soda or juice with lots of sugar. This happens because either not enough insulin (a special help hormone) is made by pancreas or used properly to control this sugar level. Too much sugar can hurt many parts inside us over time, especially nerves that feel touch and pain in our feet leading sometimes even to losing a foot if it gets infected badly from sores not healing well because of diabetes damage.\n\nIn 2014, about one out of every twenty adults had this sickness called Diabetes worldwide. It causes many deaths each year and is the reason for kidney problems too. People with it have a higher chance to get heart attacks or strokes because their blood vessels are damaged by sugar over time.",
+    "raw_word_count": 147,
+    "summary": "According to the WHO, diabetes is a sickness where the body can't use sugar rightly in our blood. Comes from food we eat and drinks like soda or juice with lots of sugar. This happens because either not enough insulin (a special help hormone) is made by pancreas or used properly to control this sugar level. Too much sugar can hurt many parts inside us over time, especially nerves that feel touch and pain in our feet leading sometimes even to losing a foot if it gets infected badly from sores not healing well because of diabetes damage. In 2014, about one out of every twenty adults had this sickness called Diabetes worldwide. It causes many deaths each year and is the reason for kidney problems too. People with it have a higher chance to get heart attacks or strokes because their blood vessels are damaged by sugar over time. Talk to a doctor before making health choices.",
+    "summary_word_count": 158,
+    "fkgl": 9.4,
+    "fre": 62.6,
     "heuristics": {
       "numeric_coverage": {
         "status": "FLAG",
         "severity": "WARNING",
-        "reason": "Only 21.1% of numbers preserved (15 missing)",
+        "reason": "Only 5.3% of numbers preserved",
         "detail": {
-          "coverage": 21.1,
           "missing": [
-            "3%",
-            "2025.",
-            "70",
             "30",
-            "18"
+            "8.5%",
+            "48%",
+            "2019.",
+            "13%"
           ]
         }
       },
       "entity_coverage": {
         "status": "PASS",
         "severity": "INFO",
-        "reason": "83.3% of entities preserved",
-        "detail": {
-          "coverage": 83.3,
-          "missing": [
-            "neuropathy"
-          ]
-        }
+        "reason": "100.0% of entities preserved",
+        "detail": {}
       },
       "compression_ratio": {
         "status": "PASS",
         "severity": "INFO",
-        "reason": "Compression ratio 0.35 \u2014 within acceptable range",
-        "detail": {
-          "ratio": 0.35
-        }
+        "reason": "Ratio 0.26 \u2014 acceptable",
+        "detail": {}
       },
       "caveat_presence": {
-        "status": "FLAG",
-        "severity": "CRITICAL",
-        "reason": "Treatment content found but NO safety caveat in summary",
-        "detail": {
-          "has_treatment": true,
-          "has_caveat": false
-        }
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "Caveat present or not needed",
+        "detail": {}
       },
       "negation_flip": {
         "status": "PASS",
         "severity": "INFO",
         "reason": "No negation flips detected",
-        "detail": {
-          "checked": 4
-        }
+        "detail": {}
       },
       "hedging_preservation": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "0.0% hedging language preserved",
-        "detail": {
-          "original_hedges": [
-            "may"
-          ],
-          "preserved": 0
-        }
+        "status": "FLAG",
+        "severity": "WARNING",
+        "reason": "Most hedging removed",
+        "detail": {}
       },
       "source_attribution": {
         "status": "PASS",
         "severity": "INFO",
-        "reason": "Source attribution present (World Health Organization (WHO))",
-        "detail": {
-          "source": "World Health Organization (WHO)"
-        }
+        "reason": "Source attribution OK",
+        "detail": {}
       },
       "sentence_count": {
         "status": "PASS",
         "severity": "INFO",
-        "reason": "6 sentences \u2014 appropriate for summary length",
-        "detail": {
-          "sentence_count": 6
-        }
+        "reason": "8 sentences \u2014 OK",
+        "detail": {}
       },
       "semantic_similarity": {
         "status": "FLAG",
-        "severity": "CRITICAL",
-        "reason": "Similarity 1.9% \u2014 possible hallucinated content",
-        "detail": {
-          "similarity_pct": 1.9
-        }
+        "severity": "WARNING",
+        "reason": "Similarity 1.6% \u2014 very different",
+        "detail": {}
       },
       "sensitive_topics": {
         "status": "PASS",
         "severity": "INFO",
-        "reason": "No sensitive topics detected",
+        "reason": "No sensitive topics",
         "detail": {}
       }
     },
-    "decision": "CRITICAL",
+    "decision": "ESCALATE",
     "review_reasons": [
-      "[CRITICAL] caveat_presence: Treatment content found but NO safety caveat in summary",
-      "[CRITICAL] semantic_similarity: Similarity 1.9% \u2014 possible hallucinated content",
-      "[WARNING] numeric_coverage: Only 21.1% of numbers preserved (15 missing)",
-      "[WARNING] readability: FKGL grade 17.3 exceeds 14",
-      "[WARNING] word_count: 209 exceeds maximum 180"
+      "[WARNING] numeric_coverage: Only 5.3% of numbers preserved",
+      "[WARNING] hedging_preservation: Most hedging removed",
+      "[WARNING] semantic_similarity: Similarity 1.6% \u2014 very different"
     ],
-    "generation_time": 319.8
+    "generation_time": 256.5
   },
   {
     "id": "TEXT_02",
     "source": "Centers for Disease Control and Prevention (CDC)",
     "title": "About Influenza (Flu) \u2013 Symptoms, Spread, and Prevention",
     "original_word_count": 607,
-    "summary": "Flu is an illness caused by germs called influenza viruses that affect our nose, throat, and sometimes lungs. It can make people feel sick from mildly uncomfortable to very severe or even deadly in some cases. Every year around this time, millions of folks get the flu in America alone! Since 2010, it's led to a lot of illnesses and hospital visits each year too.\n\nFlu germs spread when people cough, sneeze or talk near others without covering their mouths. Sometimes they can pick up these germs by touching things that have them on then touch their faces later. Most healthy adults might pass the flu to someone else starting 1 day before feeling sick and for about a week afterward. Kids, especially those under two years old or people with weak immune systems like asthma sufferers, diabetics, heart patients, pregnant women, nursing home residents may get sicker quicker than others when they catch the flu.\n\nPeople of any age can feel feverish and chills, cough a lot, have aches in muscles or body, headaches, tiredness, runny nose, stuffy nose, sore throat, vomiting, diarrhea (more common for kids), but not everyone with flu will get these.",
-    "summary_word_count": 196,
-    "fkgl": 10.2,
-    "fre": 60.9,
+    "raw_summary": "The flu is an illness from viruses that affects our nose, throat, and sometimes lungs. It can make people feel sick or even cause death in some cases. The good news? Getting a yearly shot helps prevent it. Every season in the U.S., millions get this virus causing 140 to 710 thousand hospital visits and up to half a million fatalities annually since 2010, showing its heavy impact on healthcare each year.\n\nFlu spreads when sick people cough or sneeze near others who then breathe in the virus-filled droplets. It's also possible for someone else to get it by touching a contaminated surface and then their mouth, nose, or eyes. Most healthy adults can pass on flu about 1 day before symptoms appear until up to 7 days after getting sick themselves. Children under two years old are especially infectious longer than this period.",
+    "raw_word_count": 144,
+    "summary": "The flu is an illness from viruses that affects our nose, throat, and sometimes lungs. It can make people feel sick or even cause death in some cases. The good news? Getting a yearly shot helps prevent it. Every season in the U.S., millions get this virus causing 140 to 710 thousand hospital visits and up to half a million fatalities annually since 2010, showing its heavy impact on healthcare each year. Flu spreads when sick people cough or sneeze near others who then breathe in the virus-filled droplets. It's also possible for someone else to get it by touching a contaminated surface and then their mouth, nose, or eyes. Most healthy adults can pass on flu about 1 day before symptoms appear until up to 7 days after getting sick themselves. Children under two years old are especially infectious longer than this period. Talk to a doctor before making health choices.",
+    "summary_word_count": 152,
+    "fkgl": 7.0,
+    "fre": 69.2,
     "heuristics": {
       "numeric_coverage": {
         "status": "FLAG",
         "severity": "WARNING",
-        "reason": "Only 7.7% of numbers preserved (12 missing)",
+        "reason": "Only 15.4% of numbers preserved",
         "detail": {
-          "coverage": 7.7,
           "missing": [
-            "140000",
-            "65",
-            "2",
-            "2010.",
-            "5"
+            "710000",
+            "5",
+            "12000",
+            "41",
+            "65"
           ]
         }
       },
       "entity_coverage": {
         "status": "FLAG",
         "severity": "WARNING",
-        "reason": "Only 12.5% of entities preserved (14 missing)",
+        "reason": "Only 25.0% of entities preserved",
         "detail": {
-          "coverage": 12.5,
           "missing": [
-            "diabetes",
-            "baloxavir marboxil",
-            "cdc",
-            "sepsis",
-            "zanamivir"
+            "antiviral",
+            "CDC",
+            "influenza",
+            "vaccine",
+            "diabetes"
           ]
         }
       },
       "compression_ratio": {
         "status": "PASS",
         "severity": "INFO",
-        "reason": "Compression ratio 0.32 \u2014 within acceptable range",
-        "detail": {
-          "ratio": 0.32
-        }
+        "reason": "Ratio 0.25 \u2014 acceptable",
+        "detail": {}
       },
       "caveat_presence": {
-        "status": "FLAG",
-        "severity": "CRITICAL",
-        "reason": "Treatment content found but NO safety caveat in summary",
-        "detail": {
-          "has_treatment": true,
-          "has_caveat": false
-        }
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "Caveat present or not needed",
+        "detail": {}
       },
       "negation_flip": {
         "status": "PASS",
         "severity": "INFO",
         "reason": "No negation flips detected",
-        "detail": {
-          "checked": 1
-        }
+        "detail": {}
       },
       "hedging_preservation": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "66.7% hedging language preserved",
-        "detail": {
-          "original_hedges": [
-            "may",
-            "might",
-            "possibly"
-          ],
-          "preserved": 2
-        }
+        "status": "FLAG",
+        "severity": "WARNING",
+        "reason": "Most hedging removed",
+        "detail": {}
       },
       "source_attribution": {
-        "status": "FLAG",
+        "status": "PASS",
         "severity": "INFO",
-        "reason": "Summary does not mention source (Centers for Disease Control and Prevention (CDC))",
-        "detail": {
-          "source": "Centers for Disease Control and Prevention (CDC)"
-        }
+        "reason": "Source attribution OK",
+        "detail": {}
       },
       "sentence_count": {
         "status": "PASS",
         "severity": "INFO",
-        "reason": "9 sentences \u2014 appropriate for summary length",
-        "detail": {
-          "sentence_count": 9
-        }
+        "reason": "10 sentences \u2014 OK",
+        "detail": {}
       },
       "semantic_similarity": {
         "status": "FLAG",
-        "severity": "CRITICAL",
-        "reason": "Similarity 2.0% \u2014 possible hallucinated content",
-        "detail": {
-          "similarity_pct": 2.0
-        }
+        "severity": "WARNING",
+        "reason": "Similarity 2.3% \u2014 very different",
+        "detail": {}
       },
       "sensitive_topics": {
         "status": "PASS",
         "severity": "INFO",
-        "reason": "No sensitive topics detected",
+        "reason": "No sensitive topics",
         "detail": {}
       }
     },
-    "decision": "CRITICAL",
+    "decision": "ESCALATE",
     "review_reasons": [
-      "[CRITICAL] caveat_presence: Treatment content found but NO safety caveat in summary",
-      "[CRITICAL] semantic_similarity: Similarity 2.0% \u2014 possible hallucinated content",
-      "[WARNING] numeric_coverage: Only 7.7% of numbers preserved (12 missing)",
-      "[WARNING] entity_coverage: Only 12.5% of entities preserved (14 missing)",
-      "[WARNING] word_count: 196 exceeds maximum 180",
-      "[INFO] source_attribution: Summary does not mention source (Centers for Disease Control and Prevention (CDC))"
+      "[WARNING] numeric_coverage: Only 15.4% of numbers preserved",
+      "[WARNING] entity_coverage: Only 25.0% of entities preserved",
+      "[WARNING] hedging_preservation: Most hedging removed",
+      "[WARNING] semantic_similarity: Similarity 2.3% \u2014 very different"
     ],
-    "generation_time": 319.8
+    "generation_time": 258.4
   },
   {
     "id": "TEXT_03",
     "source": "National Health Service (NHS), UK",
     "title": "High Blood Pressure (Hypertension) \u2013 Causes, Risks and Treatment",
     "original_word_count": 638,
-    "summary": "High blood pressure, also known as hypertension, often has no noticeable symptoms but can lead to serious problems like heart attacks and strokes if untreated. About a third of UK adults have high blood pressure; many don't know it because there are usually no signs or feelings that something is wrong. The only way to find out your own blood pressure level is by getting checked regularly, especially for those over 40 years old every five years at least.\n\nBlood pressures show two numbers when measured: the systolic number (higher) shows how hard your heart pumps blood around you and diastolic number (lower) represents resistance in vessels to flowing blood, both are recorded as millimetres of mercury or mmHg. High is considered 140/90mmHg or above while ideal pressure ranges between 90/60mmHg and 120/80mmHg; readings from 120/80 to 140/90 could mean you're at risk of developing high blood pressure.",
-    "summary_word_count": 148,
-    "fkgl": 13.7,
-    "fre": 49.9,
+    "raw_summary": "High blood pressure is a sneaky problem that doesn't always show symptoms but can cause big problems like heart attacks if ignored. About one in three adults in the UK has it, and many don't know because they feel fine. Adults over forty should check their blood pressure every five years to catch any issues early on.\n\nBlood pressure is measured with two numbers that tell how hard your heart works and if there\u2019s resistance against blood flowing through vessels. Normal range is between 90/60mmHg and 120/80mmHg, while high readings could mean trouble ahead without changes to keep it under control.\n\nSeveral things can raise your risk of having too much pressure in the arteries: getting older than sixty-five years old, being overweight or not exercising enough are some factors that play a role along with diet and lifestyle habits like drinking alcohol excessively. Eating less salt and more fruits and veggies can help lower risks of high blood pressure developing further down the road.",
+    "raw_word_count": 165,
+    "summary": "High blood pressure is a sneaky problem that doesn't always show symptoms but can cause big problems like heart attacks if ignored. About one in three adults in the UK has it, and many don't know because they feel fine. Adults over forty should check their blood pressure every five years to catch any issues early on. Blood pressure is measured with two numbers that tell how hard your heart works and if there\u2019s resistance against blood flowing through vessels. Normal range is between 90/60mmHg and 120/80mmHg, while high readings could mean trouble ahead without changes to keep it under control. Several things can raise your risk of having too much pressure in the arteries: getting older than sixty-five years old, being overweight or not exercising enough are some factors that play a role along with diet and lifestyle habits like drinking alcohol excessively. Eating less salt and more fruits and veggies can help lower risks of high blood pressure developing further down the road. Talk to a doctor before making health choices.",
+    "summary_word_count": 173,
+    "fkgl": 10.0,
+    "fre": 62.1,
     "heuristics": {
       "numeric_coverage": {
         "status": "PASS",
         "severity": "INFO",
-        "reason": "60.0% of numbers preserved",
-        "detail": {
-          "coverage": 60.0,
-          "missing": [
-            "74",
-            "2",
-            "65",
-            "5"
-          ]
-        }
+        "reason": "40.0% of numbers preserved",
+        "detail": {}
       },
       "entity_coverage": {
         "status": "FLAG",
         "severity": "WARNING",
-        "reason": "Only 18.2% of entities preserved (9 missing)",
+        "reason": "Only 0.0% of entities preserved",
         "detail": {
-          "coverage": 18.2,
           "missing": [
-            "calcium channel blockers",
-            "amlodipine",
-            "enalapril",
-            "lisinopril",
-            "nhs"
+            "NHS"
           ]
         }
       },
       "compression_ratio": {
         "status": "PASS",
         "severity": "INFO",
-        "reason": "Compression ratio 0.23 \u2014 within acceptable range",
-        "detail": {
-          "ratio": 0.23
-        }
+        "reason": "Ratio 0.27 \u2014 acceptable",
+        "detail": {}
       },
       "caveat_presence": {
-        "status": "FLAG",
-        "severity": "CRITICAL",
-        "reason": "Treatment content found but NO safety caveat in summary",
-        "detail": {
-          "has_treatment": true,
-          "has_caveat": false
-        }
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "Caveat present or not needed",
+        "detail": {}
       },
       "negation_flip": {
         "status": "PASS",
         "severity": "INFO",
         "reason": "No negation flips detected",
-        "detail": {
-          "checked": 10
-        }
+        "detail": {}
       },
       "hedging_preservation": {
-        "status": "FLAG",
-        "severity": "WARNING",
-        "reason": "Only 25.0% hedging preserved \u2014 claims may sound more definitive",
-        "detail": {
-          "original_hedges": [
-            "may",
-            "might",
-            "could",
-            "potentially"
-          ],
-          "missing": [
-            "may",
-            "might",
-            "potentially"
-          ]
-        }
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "Hedging preserved",
+        "detail": {}
       },
       "source_attribution": {
         "status": "FLAG",
         "severity": "INFO",
-        "reason": "Summary does not mention source (National Health Service (NHS), UK)",
-        "detail": {
-          "source": "National Health Service (NHS), UK"
-        }
+        "reason": "Source not mentioned",
+        "detail": {}
       },
       "sentence_count": {
         "status": "PASS",
         "severity": "INFO",
-        "reason": "5 sentences \u2014 appropriate for summary length",
-        "detail": {
-          "sentence_count": 5
-        }
+        "reason": "8 sentences \u2014 OK",
+        "detail": {}
       },
       "semantic_similarity": {
         "status": "FLAG",
-        "severity": "CRITICAL",
-        "reason": "Similarity 6.4% \u2014 possible hallucinated content",
-        "detail": {
-          "similarity_pct": 6.4
-        }
+        "severity": "WARNING",
+        "reason": "Similarity 3.0% \u2014 very different",
+        "detail": {}
       },
       "sensitive_topics": {
         "status": "PASS",
         "severity": "INFO",
-        "reason": "No sensitive topics detected",
+        "reason": "No sensitive topics",
+        "detail": {}
+      }
+    },
+    "decision": "ESCALATE",
+    "review_reasons": [
+      "[WARNING] entity_coverage: Only 0.0% of entities preserved",
+      "[WARNING] semantic_similarity: Similarity 3.0% \u2014 very different",
+      "[INFO] source_attribution: Source not mentioned"
+    ],
+    "generation_time": 261.4
+  },
+  {
+    "id": "TEXT_04",
+    "source": "World Health Organization (WHO)",
+    "title": "Malaria \u2013 Key Facts, Prevention, and Treatment",
+    "original_word_count": 657,
+    "raw_summary": "Malaria hurts people, mostly those living where mosquitoes live a lot. It's caused by tiny germs from bugs called Plasmodium parasites that bite humans when they sleep at night or early in the morning. Malaria can make you feel sick with fever and chills but sometimes it is very bad, making people confused, tired, having seizures, or trouble breathing. Babies, young kids, pregnant women who are not immune to malaria, those living with HIV/AIDS, travelers from places without mosquitoes and some countries in Africa have a higher risk of getting very sick from it. In 2022 alone, about half the world's cases happened on this continent; sadly, many children under five died because they got malaria there too.\n\nMosquito nets treated with insect spray and indoor spaces where mosquitoes can\u2019t live are ways to stop these bugs from spreading disease in communities around the world.",
+    "raw_word_count": 145,
+    "summary": "Malaria hurts people, mostly those living where mosquitoes live a lot. It's caused by tiny germs from bugs called Plasmodium parasites that bite humans when they sleep at night or early in the morning. Malaria can make you feel sick with fever and chills but sometimes it is very bad, making people confused, tired, having seizures, or trouble breathing. Babies, young kids, pregnant women who are not immune to malaria, those living with HIV/AIDS, travelers from places without mosquitoes and some countries in Africa have a higher risk of getting very sick from it. In 2022 alone, about half the world's cases happened on this continent. Sadly, many children under five died because they got malaria there too. Mosquito nets treated with insect spray and indoor spaces where mosquitoes can\u2019t live are ways to stop these bugs from spreading disease in communities around the world. Talk to a doctor before making health choices.",
+    "summary_word_count": 153,
+    "fkgl": 10.1,
+    "fre": 56.9,
+    "heuristics": {
+      "numeric_coverage": {
+        "status": "FLAG",
+        "severity": "WARNING",
+        "reason": "Only 4.3% of numbers preserved",
+        "detail": {
+          "missing": [
+            "2.5",
+            "21",
+            "78%",
+            "5",
+            "608000"
+          ]
+        }
+      },
+      "entity_coverage": {
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "50.0% of entities preserved",
+        "detail": {}
+      },
+      "compression_ratio": {
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "Ratio 0.23 \u2014 acceptable",
+        "detail": {}
+      },
+      "caveat_presence": {
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "Caveat present or not needed",
+        "detail": {}
+      },
+      "negation_flip": {
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "No negation flips detected",
+        "detail": {}
+      },
+      "hedging_preservation": {
+        "status": "FLAG",
+        "severity": "WARNING",
+        "reason": "Most hedging removed",
+        "detail": {}
+      },
+      "source_attribution": {
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "Source attribution OK",
+        "detail": {}
+      },
+      "sentence_count": {
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "8 sentences \u2014 OK",
+        "detail": {}
+      },
+      "semantic_similarity": {
+        "status": "FLAG",
+        "severity": "WARNING",
+        "reason": "Similarity 1.6% \u2014 very different",
+        "detail": {}
+      },
+      "sensitive_topics": {
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "No sensitive topics",
+        "detail": {}
+      }
+    },
+    "decision": "ESCALATE",
+    "review_reasons": [
+      "[WARNING] numeric_coverage: Only 4.3% of numbers preserved",
+      "[WARNING] hedging_preservation: Most hedging removed",
+      "[WARNING] semantic_similarity: Similarity 1.6% \u2014 very different"
+    ],
+    "generation_time": 255.2
+  },
+  {
+    "id": "TEXT_05",
+    "source": "Centers for Disease Control and Prevention (CDC)",
+    "title": "Mental Health \u2013 Understanding and Coping with Stress",
+    "original_word_count": 693,
+    "raw_summary": "Stress happens when life's problems get too much to handle. It can make you feel anxious or sad if it goes on long enough, which is not good for the body either. Stress makes our heart race and blood pressure go up as a way of protecting us from danger. But in today\u2019s world with lots going wrong all at once, this alarm system doesn't always turn off properly.\n\nWhen stress stays too much on your mind or body over time, it can lead to high blood pressure, heart problems and changes that might cause anxiety or depression. It could even make people gain weight because of the hormones in our bodies called cortisol. Stress is a big problem for many adults' health as they feel its effects on their body and mind very strongly.\n\nYou can tell stress by feeling headaches, muscle pain, or changes like eating too much or not enough. It might make you anxious, sad, angry, irritable, tired easily, have trouble sleeping well, avoid friends and family, exercise less often, or change how food makes you feel in your stomach.",
+    "raw_word_count": 184,
+    "summary": "According to the CDC, stress happens when life's problems get too much to handle. It can make you feel anxious or sad if it goes on long enough. Is not good for the body either. Stress makes our heart race and blood pressure go up as a way of protecting us from danger. But in today\u2019s world with lots going wrong all at once, this alarm system doesn't always turn off properly. When stress stays too much on your mind or body over time, it can lead to high blood pressure, heart problems and changes that might cause anxiety or depression. It could even make people gain weight because of the hormones in our bodies called cortisol. Stress is a big problem for many adults' health as they feel its effects on their body and mind very strongly. You can tell stress by feeling headaches, muscle pain, or changes like eating too much or not enough. Talk to a doctor before making health choices.",
+    "summary_word_count": 164,
+    "fkgl": 6.9,
+    "fre": 75.2,
+    "heuristics": {
+      "numeric_coverage": {
+        "status": "FLAG",
+        "severity": "WARNING",
+        "reason": "Only 0.0% of numbers preserved",
+        "detail": {
+          "missing": [
+            "7",
+            "9",
+            "988",
+            "31%",
+            "26%"
+          ]
+        }
+      },
+      "entity_coverage": {
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "100.0% of entities preserved",
+        "detail": {}
+      },
+      "compression_ratio": {
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "Ratio 0.24 \u2014 acceptable",
+        "detail": {}
+      },
+      "caveat_presence": {
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "Caveat present or not needed",
+        "detail": {}
+      },
+      "negation_flip": {
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "No negation flips detected",
+        "detail": {}
+      },
+      "hedging_preservation": {
+        "status": "FLAG",
+        "severity": "WARNING",
+        "reason": "Most hedging removed",
+        "detail": {}
+      },
+      "source_attribution": {
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "Source attribution OK",
+        "detail": {}
+      },
+      "sentence_count": {
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "10 sentences \u2014 OK",
+        "detail": {}
+      },
+      "semantic_similarity": {
+        "status": "FLAG",
+        "severity": "WARNING",
+        "reason": "Similarity 0.4% \u2014 very different",
+        "detail": {}
+      },
+      "sensitive_topics": {
+        "status": "FLAG",
+        "severity": "CRITICAL",
+        "reason": "Sensitive topic, no crisis info",
         "detail": {}
       }
     },
     "decision": "CRITICAL",
     "review_reasons": [
-      "[CRITICAL] caveat_presence: Treatment content found but NO safety caveat in summary",
-      "[CRITICAL] semantic_similarity: Similarity 6.4% \u2014 possible hallucinated content",
-      "[WARNING] entity_coverage: Only 18.2% of entities preserved (9 missing)",
-      "[WARNING] hedging_preservation: Only 25.0% hedging preserved \u2014 claims may sound more definitive",
-      "[INFO] source_attribution: Summary does not mention source (National Health Service (NHS), UK)"
+      "[CRITICAL] sensitive_topics: Sensitive topic, no crisis info",
+      "[WARNING] numeric_coverage: Only 0.0% of numbers preserved",
+      "[WARNING] hedging_preservation: Most hedging removed",
+      "[WARNING] semantic_similarity: Similarity 0.4% \u2014 very different"
     ],
-    "generation_time": 313.2
+    "generation_time": 259.6
   }
 ]
