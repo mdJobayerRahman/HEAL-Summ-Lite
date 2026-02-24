@@ -77,7 +77,7 @@ heal-summ-lite/
 ├── health_texts.py                 # 5 sample health articles
 └── README.md                       # This file
 ```
->>>>>>> e55441302d2c2661efd45942341ea999273f804d
+
 
 ---
 
