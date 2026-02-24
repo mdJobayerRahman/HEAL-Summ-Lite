@@ -113,21 +113,12 @@ Due to resource constraints (CPU-only inference, ~5 minutes per summary), the fo
 
 Given more time and resources, the following improvements would be implemented:
 
-### High Priority
 - **LLM-based evaluation system** to replace rule-based heuristic risk flags with more nuanced assessment
 - **Time optimization for summary generation** — current ~5 min/summary on CPU is too slow for production use
 - **Multi-model ensemble** for hallucination detection via inter-model agreement (as in original HEAL-Summ)
-
-### Medium Priority
-- **Semantic similarity using embeddings** (MiniLM-L6-v2) instead of string matching
 - **Better emotion and context integration** — started but limited by project timeline
 - **Proper Named Entity Recognition (NER)** using spaCy instead of regex patterns
 - **Toxicity detection** using RoBERTa-based classifier
-
-### Lower Priority
-- **GPU acceleration** for faster inference
-- **Batch processing** for multiple articles
-- **Fine-tuning** on health summarization examples
 
 ---
 
