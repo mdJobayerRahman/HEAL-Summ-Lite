@@ -4,18 +4,6 @@ A simplified implementation inspired by Fisher et al. (2025) — *HEAL-Summ: A L
 
 ---
 
-## Results
-
-| ID | Title | Original Words | Summary Words | FKGL | FRE | Human Review Decision |
-|----|-------|---------------|---------------|------|-----|----------------------|
-| TEXT_01 | Diabetes – Key Facts a.. | 605 | 158 | 9.4 | 62.6 | ESCALATE |
-| TEXT_02 | About Influenza (Flu) .. | 607 | 152 | 7.0 | 69.2 | ESCALATE |
-| TEXT_03 | High Blood Pressure (H.. | 638 | 173 | 10.0 | 62.1 | ESCALATE |
-| TEXT_04 | Malaria – Key Facts, P.. | 657 | 153 | 10.1 | 56.9 | ESCALATE |
-| TEXT_05 | Mental Health – Unders.. | 693 | 164 | 6.9 | 75.2 | CRITICAL |
-
----
-
 ## Write-Up
 
 1. **Approach:** Used Phi-3 Mini (3.8B) via Ollama for local CPU-based health text summarization with a **two-shot prompting strategy** — two simplified examples (~160 words each) teach the model to produce readable, full-coverage summaries. The pipeline has 5 stages: LLM summarization → post-processing → readability scoring → 10 heuristic checks → tiered human review.
@@ -32,7 +20,6 @@ A simplified implementation inspired by Fisher et al. (2025) — *HEAL-Summ: A L
 
 7. **Failure case — readability vs. information:** There is a fundamental tension between simplifying language (lowering FKGL) and preserving medical terms and statistics. The semantic similarity heuristic flagged most summaries at 1–4% similarity (possible hallucination), but this was a false positive — simplified wording naturally diverges from complex source text. Numeric coverage ranged from 0–20% because the model drops specific numbers when simplifying.
 
-<<<<<<< HEAD
 8. **Evaluation method:** 10 rule-based heuristic checks run instantly on every summary — covering numeric coverage, entity coverage, compression ratio, safety caveat presence, negation flip detection, hedging preservation, source attribution, sentence count, semantic similarity, and sensitive topic flagging. Readability is measured via Flesch-Kincaid Grade Level (target ≤12) and Flesch Reading Ease (target ≥30).
 
 9. **What I would improve with more time:** Implement LLM-as-judge evaluation for nuanced quality assessment, use semantic embedding similarity (MiniLM) instead of string matching to reduce false positives, add proper Named Entity Recognition via spaCy instead of regex, and test a multi-model ensemble for hallucination detection as described in the original HEAL-Summ paper.
@@ -45,6 +32,19 @@ A simplified implementation inspired by Fisher et al. (2025) — *HEAL-Summ: A L
 - **Toxicity detection** using RoBERTa-based classifier
 
 ---
+
+## Results
+
+| ID | Title | Original Words | Summary Words | FKGL | FRE | Human Review Decision |
+|----|-------|---------------|---------------|------|-----|----------------------|
+| TEXT_01 | Diabetes – Key Facts a.. | 605 | 158 | 9.4 | 62.6 | ESCALATE |
+| TEXT_02 | About Influenza (Flu) .. | 607 | 152 | 7.0 | 69.2 | ESCALATE |
+| TEXT_03 | High Blood Pressure (H.. | 638 | 173 | 10.0 | 62.1 | ESCALATE |
+| TEXT_04 | Malaria – Key Facts, P.. | 657 | 153 | 10.1 | 56.9 | ESCALATE |
+| TEXT_05 | Mental Health – Unders.. | 693 | 164 | 6.9 | 75.2 | CRITICAL |
+
+---
+
 
 ## Setup & Installation
 
