@@ -4,7 +4,7 @@ A simplified implementation inspired by Fisher et al. (2025) — *HEAL-Summ: A L
 
 ---
 
-## Write-Up
+## Methods and Validation
 
 1. **Approach:** Used Phi-3 Mini (3.8B) via Ollama for local CPU-based health text summarization with a **two-shot prompting strategy** — two simplified examples (~160 words each) teach the model to produce readable, full-coverage summaries. The pipeline has 5 stages: LLM summarization → post-processing → readability scoring → 10 heuristic checks → tiered human review.
 
