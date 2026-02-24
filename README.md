@@ -22,7 +22,9 @@ A simplified implementation inspired by Fisher et al. (2025) — *HEAL-Summ: A L
 
 8. **Evaluation method:** 10 rule-based heuristic checks run instantly on every summary. They cover numeric coverage, entity coverage, compression ratio, safety caveat presence, negation flip detection, hedge preservation, source attribution, sentence count, semantic similarity, and sensitive topic flags. Readability is measured via Flesch-Kincaid Grade Level (target ≤12) and Flesch Reading Ease (target ≥30).
 
-9. **What I would improve with more time:** I would add an LLM-as-judge evaluation step for more nuanced quality assessment, swap string match for semantic embeddings (MiniLM) to reduce false positives, replace regex-based entity extraction with proper NER via spaCy, and test a multi-model ensemble for hallucination detection as described in the original HEAL-Summ paper. I would also explore an LLM-based evaluation system to replace rule-based heuristic risk flags, optimize the ~5 min/summary generation time on CPU, look into multi-model ensembles for inter-model agreement on hallucination detection, integrate better emotion and context analysis (which I started but could not finish due to the project timeline), and add toxicity detection with a RoBERTa-based classifier.
+9. **With more time:** I would swap string match for semantic embeddings (MiniLM) to cut false positives, replace regex entity extraction with spaCy NER, add an LLM-as-judge step for better quality assessment, and test a multi-model ensemble for hallucination detection as in the original HEAL-Summ paper. I would also look into faster generation on CPU and add toxicity detection with a RoBERTa classifier.
+
+
 
 ---
 
@@ -82,9 +84,9 @@ heal-summ-lite/
 
 ## Tool Use Disclosure
 
-- **Google AI Studio (Gemini):** Used as a strategic brainstorming partner to design the clinical risk heuristics (e.g., identifying Directionality Flips and Disparity Erasure) and to structure the logic for the multi-tiered human review protocol.
-- **Claude (Anthropic):** Utilized for some code generation, structuring the Python evaluation pipeline, formatting the pandas outputs, and debugging the heuristic logic loops.
-- **ChatGPT 5.2:** Used strictly for benchmark comparison to evaluate how a frontier model handles full-context health summarization versus the outputs of the smaller, locally deployed Phi-3 model.
+- My planning was done with Google Studio and Gemini. It acted as a partner to brainstorm the clinical risk rules. This helped me figure out how to catch things like Directionality Flips and Disparity Erasure. It also helped structure the logic for the human review steps.
+- The Python code was written with some help from Claude by Anthropic. It was very useful for the test pipeline and to make the pandas data outputs look right. I also needed it to find and fix bugs in my logic loops.
+- To see how good my work was I used ChatGPT version 5.2 for a strict comparison. I just wanted to evaluate how a massive frontier system handles the full health texts next to my small Phi-3 setup that runs on my own computer.
 
 ---
 
