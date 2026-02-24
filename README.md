@@ -75,7 +75,6 @@ jupyter notebook HEAL_Summ_Lite_updated.ipynb
 heal-summ-lite/
 ├── HEAL_Summ_Lite_updated.ipynb   # Main pipeline notebook
 ├── health_texts.py                 # 5 sample health articles
-├── heal_summ_results.json          # Output results (generated)
 └── README.md                       # This file
 ```
 >>>>>>> e55441302d2c2661efd45942341ea999273f804d
