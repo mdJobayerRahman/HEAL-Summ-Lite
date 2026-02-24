@@ -12,7 +12,7 @@ A simplified implementation inspired by Fisher et al. (2025) — *HEAL-Summ: A L
 
 3. **Assumption (sequential bias):** Phi-3 Mini produces tokens left to right with no ability to plan ahead. It cannot read the whole text and decide what matters most the way a larger model would. The two-shot examples compensate for this because they show the expected full-coverage pattern, and their simplified language (FKGL ~5) pushes the model toward plain-language output.
 
-4. **Assumption (post-process is acceptable):** The model consistently left out safety caveats and source attributions, so the post-process step automatically adds "Talk to a doctor before making health choices" and source references (WHO/CDC/NHS) when they are absent. This is transparent and documented, not hidden from the reviewer.
+4. **Assumption (Post-processing):** The model consistently left out safety caveats and source attributions, so the post-process step automatically adds "Talk to a doctor before making health choices" and source references (WHO/CDC/NHS) when they are absent. This is transparent and documented, not hidden from the reviewer.
 
 5. **What worked:** Two-shot prompts successfully produced complete summaries within the 120–180 word target for all 5 texts. Simplified examples (8–12 words per sentence) brought FKGL scores down from 12–18 (zero-shot) to 6.9–10.1. The 10 heuristic checks gave instant, reproducible quality flags, and the tiered human review system (CRITICAL/ESCALATE/REVIEW/APPROVED) provided clear escalation decisions.
 
