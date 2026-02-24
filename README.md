@@ -18,7 +18,7 @@ A simplified implementation inspired by Fisher et al. (2025) — *HEAL-Summ: A L
 
 6. **Failure case (TextRank and TF-IDF):** Before I landed on two-shot prompts, I tried TextRank (graph-based) and TF-IDF (term frequency) extraction to pre-select key sentences. Both failed because when I removed sentences before the LLM saw them, roughly 50% of entities were lost, readability dropped, and word count fell short. The LLM needs the full text to preserve all statistics and entities.
 
-7. **Failure case (readability vs. information):** There is a real tension between simplified language (lower FKGL) and preserved medical terms and statistics. The semantic similarity heuristic flagged most summaries at 1–4% (possible hallucination), but this was a false positive because simplified text naturally diverges from complex source text. Numeric coverage ranged from 0–20% because the model tends to drop specific numbers when it simplifies.
+7. **Failure case (readability vs. information):** Before two-shot prompting, I tried TextRank (graph-based) and TF-IDF (term frequency) extraction to pre-select key sentences. Both failed, removing sentences before the LLM saw them caused ~50% entity loss, lower readability, and insufficient word count. The LLM needs the full text to preserve all statistics and entities.
 
 8. **Evaluation method:** 10 rule-based heuristic checks run instantly on every summary. They cover numeric coverage, entity coverage, compression ratio, safety caveat presence, negation flip detection, hedge preservation, source attribution, sentence count, semantic similarity, and sensitive topic flags. Readability is measured via Flesch-Kincaid Grade Level (target ≤12) and Flesch Reading Ease (target ≥30).
 
@@ -83,9 +83,9 @@ heal-summ-lite/
 
 ## Tool Use Disclosure
 
-- My planning was done with Google Studio and Gemini. It acted as a partner to brainstorm the clinical risk rules. This helped me figure out how to catch things like Directionality Flips and Disparity Erasure. It also helped structure the logic for the human review steps.
-- The Python code was written with some help from Claude by Anthropic. It was very useful for the test pipeline and to make the pandas data outputs look right. I also needed it to find and fix bugs in my logic loops.
-- To see how good my work was I used ChatGPT version 5.2 for a strict comparison. I just wanted to evaluate how a massive frontier system handles the full health texts next to my small Phi-3 setup that runs on my own computer.
+- My planning was done with Google Studio and Gemini. It served in brainstorming the clinical risk rules. It also helped structure the logic for the human review steps.
+- The Python code was written with some help from Claude Opus 4.6. It was very useful for the test pipeline and to make the pandas data outputs look right. I also needed it to find and fix bugs in my logic loops.
+- To see how good my work was, I used ChatGPT version 5.2 for a strict comparison. I just wanted to evaluate how a system handles the full health texts next to my small Phi-3 setup that runs on my own computer.
 
 ---
 
