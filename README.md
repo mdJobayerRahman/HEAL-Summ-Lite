@@ -32,9 +32,58 @@ A simplified implementation inspired by Fisher et al. (2025) — *HEAL-Summ: A L
 
 7. **Failure case — readability vs. information:** There is a fundamental tension between simplifying language (lowering FKGL) and preserving medical terms and statistics. The semantic similarity heuristic flagged most summaries at 1–4% similarity (possible hallucination), but this was a false positive — simplified wording naturally diverges from complex source text. Numeric coverage ranged from 0–20% because the model drops specific numbers when simplifying.
 
+<<<<<<< HEAD
 8. **Evaluation method:** 10 rule-based heuristic checks run instantly on every summary — covering numeric coverage, entity coverage, compression ratio, safety caveat presence, negation flip detection, hedging preservation, source attribution, sentence count, semantic similarity, and sensitive topic flagging. Readability is measured via Flesch-Kincaid Grade Level (target ≤12) and Flesch Reading Ease (target ≥30).
 
 9. **What I would improve with more time:** Implement LLM-as-judge evaluation for nuanced quality assessment, use semantic embedding similarity (MiniLM) instead of string matching to reduce false positives, add proper Named Entity Recognition via spaCy instead of regex, and test a multi-model ensemble for hallucination detection as described in the original HEAL-Summ paper.
+=======
+- **LLM-based evaluation system** to replace rule-based heuristic risk flags with more nuanced assessment
+- **Time optimization for summary generation** — current ~5 min/summary on CPU is too slow for production use
+- **Multi-model ensemble** for hallucination detection via inter-model agreement (as in original HEAL-Summ)
+- **Better emotion and context integration** — started but limited by project timeline
+- **Proper Named Entity Recognition (NER)** using spaCy instead of regex patterns
+- **Toxicity detection** using RoBERTa-based classifier
+
+---
+
+## Setup & Installation
+
+### Prerequisites
+- Python 3.10+
+- Ollama installed and running
+- 8GB+ RAM recommended
+
+### Installation
+
+```bash
+# 1. Install Ollama
+curl -fsSL https://ollama.ai/install.sh | sh
+
+# 2. Pull the model
+ollama pull phi3:mini
+
+# 3. Start Ollama server
+ollama serve
+
+# 4. Install Python dependencies
+pip install requests textstat tabulate
+
+# 5. Run the notebook
+jupyter notebook HEAL_Summ_Lite_updated.ipynb
+```
+
+---
+
+## File Structure
+
+```
+heal-summ-lite/
+├── HEAL_Summ_Lite_updated.ipynb   # Main pipeline notebook
+├── health_texts.py                 # 5 sample health articles
+├── heal_summ_results.json          # Output results (generated)
+└── README.md                       # This file
+```
+>>>>>>> e55441302d2c2661efd45942341ea999273f804d
 
 ---
 
