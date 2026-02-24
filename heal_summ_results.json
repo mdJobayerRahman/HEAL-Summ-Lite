@@ -4,46 +4,43 @@
     "source": "World Health Organization (WHO)",
     "title": "Diabetes \u2013 Key Facts and Prevention",
     "original_word_count": 605,
-    "summary": "Diabetes is a chronic disease where the body struggles with insulin production or use, leading to high blood sugar levels called hyperglycaemia. This condition can cause serious damage over time, particularly affecting nerves and vessels throughout the body. In fact, diabetes was responsible for around 1.5 million deaths in 2019 alone, with a significant portion of these occurring before age 70. It also contributes to kidney disease fatalities and is linked to about one-fifth of cardiovascular deaths globally due to raised blood glucose levels. Since the year 2000, diabetes mortality rates have increased by 3%, with a sharper rise in lower-middle-income countries where it went up by 13%. Conversely, global mortality from other major noncommunicable diseases between ages 30 and 70 has decreased. Type 2 diabetes is the most common form worldwide, accounting for about 95% of cases, often resulting from excess body weight and lack of physical activity.",
-    "summary_word_count": 149,
-    "fkgl": 12.7,
-    "fre": 36.9,
+    "summary": "Diabetes is a disease where the body can't use sugar properly because it either doesn't make enough insulin or uses what there is wrongly, and this leads to high blood sugar levels called hyperglycaemia. This condition affects many people around the world causing damage mainly in nerves and vessels over time if not managed well. In 2014, about one eighth of adults had diabetes which led to nearly two million deaths directly from it by 2019 with most happening before age seventy-five. Diabetes also causes kidney disease deaths and contributes significantly to heart diseases leading to blindness in some cases too, especially affecting the eyes called retinopathy which can lead to not being able to see well or at all due to diabetes complications worldwide.\n\nType 2 is most common form of this disease often linked with obesity and lack of exercise while Type 1 happens when pancreas fails in insulin production, mostly affecting children but can also happen later on as adults need their own insulin too. Good control through diet, activity, medication if needed, regular check-ups for complications are key to living with this disease and avoid serious problems like heart attacks or strokes that come along due to it in people who already have the condition.",
+    "summary_word_count": 209,
+    "fkgl": 17.3,
+    "fre": 33.0,
     "heuristics": {
       "numeric_coverage": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "47.4% of numbers preserved",
+        "status": "FLAG",
+        "severity": "WARNING",
+        "reason": "Only 21.1% of numbers preserved (15 missing)",
         "detail": {
-          "coverage": 47.4,
+          "coverage": 21.1,
           "missing": [
-            "460000",
+            "3%",
             "2025.",
-            "1",
-            "22%",
+            "70",
+            "30",
             "18"
           ]
         }
       },
       "entity_coverage": {
-        "status": "FLAG",
-        "severity": "WARNING",
-        "reason": "Only 33.3% of entities preserved (4 missing)",
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "83.3% of entities preserved",
         "detail": {
-          "coverage": 33.3,
+          "coverage": 83.3,
           "missing": [
-            "obesity",
-            "who",
-            "neuropathy",
-            "retinopathy"
+            "neuropathy"
           ]
         }
       },
       "compression_ratio": {
         "status": "PASS",
         "severity": "INFO",
-        "reason": "Compression ratio 0.25 \u2014 within acceptable range",
+        "reason": "Compression ratio 0.35 \u2014 within acceptable range",
         "detail": {
-          "ratio": 0.25
+          "ratio": 0.35
         }
       },
       "caveat_presence": {
@@ -75,9 +72,9 @@
         }
       },
       "source_attribution": {
-        "status": "FLAG",
+        "status": "PASS",
         "severity": "INFO",
-        "reason": "Summary does not mention source (World Health Organization (WHO))",
+        "reason": "Source attribution present (World Health Organization (WHO))",
         "detail": {
           "source": "World Health Organization (WHO)"
         }
@@ -85,17 +82,17 @@
       "sentence_count": {
         "status": "PASS",
         "severity": "INFO",
-        "reason": "7 sentences \u2014 appropriate for summary length",
+        "reason": "6 sentences \u2014 appropriate for summary length",
         "detail": {
-          "sentence_count": 7
+          "sentence_count": 6
         }
       },
       "semantic_similarity": {
         "status": "FLAG",
         "severity": "CRITICAL",
-        "reason": "Similarity 6.1% \u2014 possible hallucinated content",
+        "reason": "Similarity 1.9% \u2014 possible hallucinated content",
         "detail": {
-          "similarity_pct": 6.1
+          "similarity_pct": 1.9
         }
       },
       "sensitive_topics": {
@@ -108,59 +105,59 @@
     "decision": "CRITICAL",
     "review_reasons": [
       "[CRITICAL] caveat_presence: Treatment content found but NO safety caveat in summary",
-      "[CRITICAL] semantic_similarity: Similarity 6.1% \u2014 possible hallucinated content",
-      "[WARNING] entity_coverage: Only 33.3% of entities preserved (4 missing)",
-      "[WARNING] readability: FKGL grade 12.7 exceeds 10",
-      "[INFO] source_attribution: Summary does not mention source (World Health Organization (WHO))"
+      "[CRITICAL] semantic_similarity: Similarity 1.9% \u2014 possible hallucinated content",
+      "[WARNING] numeric_coverage: Only 21.1% of numbers preserved (15 missing)",
+      "[WARNING] readability: FKGL grade 17.3 exceeds 14",
+      "[WARNING] word_count: 209 exceeds maximum 180"
     ],
-    "generation_time": 327.8
+    "generation_time": 319.8
   },
   {
     "id": "TEXT_02",
     "source": "Centers for Disease Control and Prevention (CDC)",
     "title": "About Influenza (Flu) \u2013 Symptoms, Spread, and Prevention",
     "original_word_count": 607,
-    "summary": "Influenza, or the flu, is an infectious respiratory illness caused by influenza viruses that can range from mild discomfort to severe complications including death. Annually in the United States alone, millions contract the virus leading to between 12,000 and 52,000 fatalities each year since 2010 according to CDC estimates. Flu viruses are transmitted through droplets when an infected person coughs or sneezes, with less common transmission via touching contaminated surfaces followed by contact of the mouth, nose, or eyes. The illness can be particularly severe in children under 5 years old and those younger than 65 due to weakened immune systems from chronic conditions like asthma, diabetes, heart disease, etc., with American Indian and Alaska Native populations at an even higher risk of complications such as pneumonia or sepsis.\n\nFlu symptoms typically manifest suddenly and include fever, cough, sore throat, runny nose, body aches, headaches, fatigue, vomiting in children more often than adults, but not everyone experiences a fever.",
-    "summary_word_count": 159,
-    "fkgl": 16.3,
-    "fre": 25.1,
+    "summary": "Flu is an illness caused by germs called influenza viruses that affect our nose, throat, and sometimes lungs. It can make people feel sick from mildly uncomfortable to very severe or even deadly in some cases. Every year around this time, millions of folks get the flu in America alone! Since 2010, it's led to a lot of illnesses and hospital visits each year too.\n\nFlu germs spread when people cough, sneeze or talk near others without covering their mouths. Sometimes they can pick up these germs by touching things that have them on then touch their faces later. Most healthy adults might pass the flu to someone else starting 1 day before feeling sick and for about a week afterward. Kids, especially those under two years old or people with weak immune systems like asthma sufferers, diabetics, heart patients, pregnant women, nursing home residents may get sicker quicker than others when they catch the flu.\n\nPeople of any age can feel feverish and chills, cough a lot, have aches in muscles or body, headaches, tiredness, runny nose, stuffy nose, sore throat, vomiting, diarrhea (more common for kids), but not everyone with flu will get these.",
+    "summary_word_count": 196,
+    "fkgl": 10.2,
+    "fre": 60.9,
     "heuristics": {
       "numeric_coverage": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "30.8% of numbers preserved",
+        "status": "FLAG",
+        "severity": "WARNING",
+        "reason": "Only 7.7% of numbers preserved (12 missing)",
         "detail": {
-          "coverage": 30.8,
+          "coverage": 7.7,
           "missing": [
-            "7",
-            "41",
-            "9",
             "140000",
-            "710000"
+            "65",
+            "2",
+            "2010.",
+            "5"
           ]
         }
       },
       "entity_coverage": {
         "status": "FLAG",
         "severity": "WARNING",
-        "reason": "Only 37.5% of entities preserved (10 missing)",
+        "reason": "Only 12.5% of entities preserved (14 missing)",
         "detail": {
-          "coverage": 37.5,
+          "coverage": 12.5,
           "missing": [
-            "zanamivir",
-            "antiviral drugs",
-            "oseltamivir",
-            "rapivab",
-            "peramivir"
+            "diabetes",
+            "baloxavir marboxil",
+            "cdc",
+            "sepsis",
+            "zanamivir"
           ]
         }
       },
       "compression_ratio": {
         "status": "PASS",
         "severity": "INFO",
-        "reason": "Compression ratio 0.26 \u2014 within acceptable range",
+        "reason": "Compression ratio 0.32 \u2014 within acceptable range",
         "detail": {
-          "ratio": 0.26
+          "ratio": 0.32
         }
       },
       "caveat_presence": {
@@ -181,378 +178,16 @@
         }
       },
       "hedging_preservation": {
-        "status": "FLAG",
-        "severity": "WARNING",
-        "reason": "Only 0.0% hedging preserved \u2014 claims may sound more definitive",
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "66.7% hedging language preserved",
         "detail": {
           "original_hedges": [
             "may",
             "might",
             "possibly"
           ],
-          "missing": [
-            "may",
-            "might",
-            "possibly"
-          ]
-        }
-      },
-      "source_attribution": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "Source attribution present (Centers for Disease Control and Prevention (CDC))",
-        "detail": {
-          "source": "Centers for Disease Control and Prevention (CDC)"
-        }
-      },
-      "sentence_count": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "5 sentences \u2014 appropriate for summary length",
-        "detail": {
-          "sentence_count": 5
-        }
-      },
-      "semantic_similarity": {
-        "status": "FLAG",
-        "severity": "CRITICAL",
-        "reason": "Similarity 3.0% \u2014 possible hallucinated content",
-        "detail": {
-          "similarity_pct": 3.0
-        }
-      },
-      "sensitive_topics": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "No sensitive topics detected",
-        "detail": {}
-      }
-    },
-    "decision": "CRITICAL",
-    "review_reasons": [
-      "[CRITICAL] caveat_presence: Treatment content found but NO safety caveat in summary",
-      "[CRITICAL] semantic_similarity: Similarity 3.0% \u2014 possible hallucinated content",
-      "[WARNING] entity_coverage: Only 37.5% of entities preserved (10 missing)",
-      "[WARNING] hedging_preservation: Only 0.0% hedging preserved \u2014 claims may sound more definitive",
-      "[WARNING] readability: FKGL grade 16.3 exceeds 10",
-      "[WARNING] readability: FRE 25.1 below 30.0"
-    ],
-    "generation_time": 288.3
-  },
-  {
-    "id": "TEXT_03",
-    "source": "National Health Service (NHS), UK",
-    "title": "How Seasonal Changes Shape Our Mood, Mind, and Decisions",
-    "original_word_count": 401,
-    "summary": "The changing seasons can significantly impact our behavior and decision-making processes due to variations in daylight hours affecting human psychology, according to research published in Perspectives on Psychological Science. This phenomenon is widely recognized as \"Seasonal Affective Disorder\" (Sad), characterized by persistent sadness or anxiety lasting at least two weeks during wintertime when days are shorter and darker. Symptoms include feelings of hopelessness, decreased energy levels, oversleeping, overeating, and a general sense of melancholy known as the \"winter blues.\" A study by Cornell University researchers analyzed 509 million tweets across various countries in the early 2010s. They discovered that shorter days led to fewer positive words used on social media posts during winter, suggesting a link between reduced daylight and emotional tone. Theories suggest this seasonal mood shift may be due to disruinations of our biological clock or circadian rhythm caused by less natural light exposure in the darker months. Light therapy has been explored as an intervention, but its effectiveness remains limited according to a 2019 Cochrane Systematic Review. Understanding these seasonal psychology variations is essential for maintaining our well-being and making informed decisions during different times of the year.",
-    "summary_word_count": 191,
-    "fkgl": 17.0,
-    "fre": 16.1,
-    "heuristics": {
-      "numeric_coverage": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "75.0% of numbers preserved",
-        "detail": {
-          "coverage": 75.0,
-          "missing": [
-            "84"
-          ]
-        }
-      },
-      "entity_coverage": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "50.0% of entities preserved",
-        "detail": {
-          "coverage": 50.0,
-          "missing": [
-            "depression"
-          ]
-        }
-      },
-      "compression_ratio": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "Compression ratio 0.48 \u2014 within acceptable range",
-        "detail": {
-          "ratio": 0.48
-        }
-      },
-      "caveat_presence": {
-        "status": "FLAG",
-        "severity": "CRITICAL",
-        "reason": "Treatment content found but NO safety caveat in summary",
-        "detail": {
-          "has_treatment": true,
-          "has_caveat": false
-        }
-      },
-      "negation_flip": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "No negation flips detected",
-        "detail": {
-          "checked": 1
-        }
-      },
-      "hedging_preservation": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "50.0% hedging language preserved",
-        "detail": {
-          "original_hedges": [
-            "may",
-            "suggests"
-          ],
-          "preserved": 1
-        }
-      },
-      "source_attribution": {
-        "status": "FLAG",
-        "severity": "INFO",
-        "reason": "Summary does not mention source (National Health Service (NHS), UK)",
-        "detail": {
-          "source": "National Health Service (NHS), UK"
-        }
-      },
-      "sentence_count": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "7 sentences \u2014 appropriate for summary length",
-        "detail": {
-          "sentence_count": 7
-        }
-      },
-      "semantic_similarity": {
-        "status": "FLAG",
-        "severity": "CRITICAL",
-        "reason": "Similarity 7.5% \u2014 possible hallucinated content",
-        "detail": {
-          "similarity_pct": 7.5
-        }
-      },
-      "sensitive_topics": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "No sensitive topics detected",
-        "detail": {}
-      }
-    },
-    "decision": "CRITICAL",
-    "review_reasons": [
-      "[CRITICAL] caveat_presence: Treatment content found but NO safety caveat in summary",
-      "[CRITICAL] semantic_similarity: Similarity 7.5% \u2014 possible hallucinated content",
-      "[WARNING] readability: FKGL grade 17.0 exceeds 10",
-      "[WARNING] readability: FRE 16.1 below 30.0",
-      "[WARNING] word_count: 191 exceeds maximum 180",
-      "[INFO] source_attribution: Summary does not mention source (National Health Service (NHS), UK)"
-    ],
-    "generation_time": 278.7
-  },
-  {
-    "id": "TEXT_04",
-    "source": "World Health Organization (WHO)",
-    "title": "Malaria \u2013 Key Facts, Prevention, and Treatment",
-    "original_word_count": 657,
-    "summary": "Malaria, a life-threatening disease caused by Plasmodium parasites transmitted through mosquito bites, is prevalent in tropical regions but preventable and curable with timely intervention. Symptoms range from mild fever to severe complications like seizures or difficulty breathing; infants, young children under 5 years old, expectant mothers, HIV/AIDS patients, migrants without immunity, mobile populations, and travelers are at higher risk for serious illness.\n\nIn 2022 alone, there were an estimated 249 million malaria cases leading to around 608,000 deaths across 85 countries globally, with the African Region bearing a significant share of these numbers and suffering disproportionately high rates among children under five.\n\nMalaria transmission is concentrated in sub-Saharan Africa as well as parts of South America, Asia (both Southeast and Eastern), and Oceania's Western Pacific regions. Special measures are needed to protect vulnerable groups from contracting malaria within national control programs.",
-    "summary_word_count": 141,
-    "fkgl": 18.7,
-    "fre": 11.4,
-    "heuristics": {
-      "numeric_coverage": {
-        "status": "FLAG",
-        "severity": "WARNING",
-        "reason": "Only 21.7% of numbers preserved (18 missing)",
-        "detail": {
-          "coverage": 21.7,
-          "missing": [
-            "56%",
-            "2022.",
-            "95%",
-            "26.8%",
-            "2021"
-          ]
-        }
-      },
-      "entity_coverage": {
-        "status": "FLAG",
-        "severity": "WARNING",
-        "reason": "Only 23.1% of entities preserved (10 missing)",
-        "detail": {
-          "coverage": 23.1,
-          "missing": [
-            "chemoprevention",
-            "irs",
-            "mosquirix",
-            "itns",
-            "act"
-          ]
-        }
-      },
-      "compression_ratio": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "Compression ratio 0.21 \u2014 within acceptable range",
-        "detail": {
-          "ratio": 0.21
-        }
-      },
-      "caveat_presence": {
-        "status": "FLAG",
-        "severity": "CRITICAL",
-        "reason": "Treatment content found but NO safety caveat in summary",
-        "detail": {
-          "has_treatment": true,
-          "has_caveat": false
-        }
-      },
-      "negation_flip": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "No negation flips detected",
-        "detail": {
-          "checked": 1
-        }
-      },
-      "hedging_preservation": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "50.0% hedging language preserved",
-        "detail": {
-          "original_hedges": [
-            "estimated",
-            "approximately"
-          ],
-          "preserved": 1
-        }
-      },
-      "source_attribution": {
-        "status": "FLAG",
-        "severity": "INFO",
-        "reason": "Summary does not mention source (World Health Organization (WHO))",
-        "detail": {
-          "source": "World Health Organization (WHO)"
-        }
-      },
-      "sentence_count": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "5 sentences \u2014 appropriate for summary length",
-        "detail": {
-          "sentence_count": 5
-        }
-      },
-      "semantic_similarity": {
-        "status": "FLAG",
-        "severity": "CRITICAL",
-        "reason": "Similarity 6.0% \u2014 possible hallucinated content",
-        "detail": {
-          "similarity_pct": 6.0
-        }
-      },
-      "sensitive_topics": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "No sensitive topics detected",
-        "detail": {}
-      }
-    },
-    "decision": "CRITICAL",
-    "review_reasons": [
-      "[CRITICAL] caveat_presence: Treatment content found but NO safety caveat in summary",
-      "[CRITICAL] semantic_similarity: Similarity 6.0% \u2014 possible hallucinated content",
-      "[WARNING] numeric_coverage: Only 21.7% of numbers preserved (18 missing)",
-      "[WARNING] entity_coverage: Only 23.1% of entities preserved (10 missing)",
-      "[WARNING] readability: FKGL grade 18.7 exceeds 10",
-      "[WARNING] readability: FRE 11.4 below 30.0",
-      "[INFO] source_attribution: Summary does not mention source (World Health Organization (WHO))"
-    ],
-    "generation_time": 297.8
-  },
-  {
-    "id": "TEXT_05",
-    "source": "Centers for Disease Control and Prevention (CDC)",
-    "title": "Mental Health \u2013 Understanding and Coping with Stress",
-    "original_word_count": 693,
-    "summary": "Stress arises from life's demands but too much can harm both mind and body; it triggers our fight-or-flight response, releasing hormones that raise heart rate and blood pressure to deal with threats. Chronic stress has been linked by studies like those of the American Psychological Association to high blood pressure, artery clogging deposits, anxiety, depression, addiction, obesity due to cortisol effects on eating habits and physical activity levels; it also impacts mental health as per National Institute of Mental Health reports. Recognizing stress signs is crucial\u2014physical symptoms include headaches or changes in sleep patterns while emotional ones range from anxiety to social withdrawal, with behavioral indicators like eating habits and motivation levels being affected too.\n\nTo manage it effectively over time, strategies such as regular exercise (at least 150 minutes per week of moderate-intensity activities), relaxation techniques including deep breathing or meditation are recommended by health organizations for their stress hormone reduction benefits and mood improvement effects; maintaining strong social connections through family ties, community groups, volunteering also provides emotional support.",
-    "summary_word_count": 171,
-    "fkgl": 24.1,
-    "fre": -1.3,
-    "heuristics": {
-      "numeric_coverage": {
-        "status": "FLAG",
-        "severity": "WARNING",
-        "reason": "Only 16.7% of numbers preserved (5 missing)",
-        "detail": {
-          "coverage": 16.7,
-          "missing": [
-            "7",
-            "31%",
-            "26%",
-            "988",
-            "9"
-          ]
-        }
-      },
-      "entity_coverage": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "60.0% of entities preserved",
-        "detail": {
-          "coverage": 60.0,
-          "missing": [
-            "cognitive behavioral therapy",
-            "national sleep foundation",
-            "cbt",
-            "cdc"
-          ]
-        }
-      },
-      "compression_ratio": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "Compression ratio 0.25 \u2014 within acceptable range",
-        "detail": {
-          "ratio": 0.25
-        }
-      },
-      "caveat_presence": {
-        "status": "FLAG",
-        "severity": "CRITICAL",
-        "reason": "Treatment content found but NO safety caveat in summary",
-        "detail": {
-          "has_treatment": true,
-          "has_caveat": false
-        }
-      },
-      "negation_flip": {
-        "status": "PASS",
-        "severity": "INFO",
-        "reason": "No negation flips detected",
-        "detail": {
-          "checked": 2
-        }
-      },
-      "hedging_preservation": {
-        "status": "FLAG",
-        "severity": "WARNING",
-        "reason": "Only 0.0% hedging preserved \u2014 claims may sound more definitive",
-        "detail": {
-          "original_hedges": [
-            "may",
-            "suggests",
-            "preliminary",
-            "approximately",
-            "may contribute"
-          ],
-          "missing": [
-            "may",
-            "suggests",
-            "preliminary",
-            "approximately",
-            "may contribute"
-          ]
+          "preserved": 2
         }
       },
       "source_attribution": {
@@ -566,42 +201,158 @@
       "sentence_count": {
         "status": "PASS",
         "severity": "INFO",
-        "reason": "4 sentences \u2014 appropriate for summary length",
+        "reason": "9 sentences \u2014 appropriate for summary length",
         "detail": {
-          "sentence_count": 4
+          "sentence_count": 9
         }
       },
       "semantic_similarity": {
         "status": "FLAG",
         "severity": "CRITICAL",
-        "reason": "Similarity 2.8% \u2014 possible hallucinated content",
+        "reason": "Similarity 2.0% \u2014 possible hallucinated content",
         "detail": {
-          "similarity_pct": 2.8
+          "similarity_pct": 2.0
         }
       },
       "sensitive_topics": {
-        "status": "FLAG",
-        "severity": "CRITICAL",
-        "reason": "Sensitive topic detected but crisis resources missing from summary",
-        "detail": {
-          "missing_resources": [
-            "lifeline",
-            "988"
-          ]
-        }
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "No sensitive topics detected",
+        "detail": {}
       }
     },
     "decision": "CRITICAL",
     "review_reasons": [
       "[CRITICAL] caveat_presence: Treatment content found but NO safety caveat in summary",
-      "[CRITICAL] semantic_similarity: Similarity 2.8% \u2014 possible hallucinated content",
-      "[CRITICAL] sensitive_topics: Sensitive topic detected but crisis resources missing from summary",
-      "[WARNING] numeric_coverage: Only 16.7% of numbers preserved (5 missing)",
-      "[WARNING] hedging_preservation: Only 0.0% hedging preserved \u2014 claims may sound more definitive",
-      "[WARNING] readability: FKGL grade 24.1 exceeds 10",
-      "[WARNING] readability: FRE -1.3 below 30.0",
+      "[CRITICAL] semantic_similarity: Similarity 2.0% \u2014 possible hallucinated content",
+      "[WARNING] numeric_coverage: Only 7.7% of numbers preserved (12 missing)",
+      "[WARNING] entity_coverage: Only 12.5% of entities preserved (14 missing)",
+      "[WARNING] word_count: 196 exceeds maximum 180",
       "[INFO] source_attribution: Summary does not mention source (Centers for Disease Control and Prevention (CDC))"
     ],
-    "generation_time": 304.3
+    "generation_time": 319.8
+  },
+  {
+    "id": "TEXT_03",
+    "source": "National Health Service (NHS), UK",
+    "title": "High Blood Pressure (Hypertension) \u2013 Causes, Risks and Treatment",
+    "original_word_count": 638,
+    "summary": "High blood pressure, also known as hypertension, often has no noticeable symptoms but can lead to serious problems like heart attacks and strokes if untreated. About a third of UK adults have high blood pressure; many don't know it because there are usually no signs or feelings that something is wrong. The only way to find out your own blood pressure level is by getting checked regularly, especially for those over 40 years old every five years at least.\n\nBlood pressures show two numbers when measured: the systolic number (higher) shows how hard your heart pumps blood around you and diastolic number (lower) represents resistance in vessels to flowing blood, both are recorded as millimetres of mercury or mmHg. High is considered 140/90mmHg or above while ideal pressure ranges between 90/60mmHg and 120/80mmHg; readings from 120/80 to 140/90 could mean you're at risk of developing high blood pressure.",
+    "summary_word_count": 148,
+    "fkgl": 13.7,
+    "fre": 49.9,
+    "heuristics": {
+      "numeric_coverage": {
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "60.0% of numbers preserved",
+        "detail": {
+          "coverage": 60.0,
+          "missing": [
+            "74",
+            "2",
+            "65",
+            "5"
+          ]
+        }
+      },
+      "entity_coverage": {
+        "status": "FLAG",
+        "severity": "WARNING",
+        "reason": "Only 18.2% of entities preserved (9 missing)",
+        "detail": {
+          "coverage": 18.2,
+          "missing": [
+            "calcium channel blockers",
+            "amlodipine",
+            "enalapril",
+            "lisinopril",
+            "nhs"
+          ]
+        }
+      },
+      "compression_ratio": {
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "Compression ratio 0.23 \u2014 within acceptable range",
+        "detail": {
+          "ratio": 0.23
+        }
+      },
+      "caveat_presence": {
+        "status": "FLAG",
+        "severity": "CRITICAL",
+        "reason": "Treatment content found but NO safety caveat in summary",
+        "detail": {
+          "has_treatment": true,
+          "has_caveat": false
+        }
+      },
+      "negation_flip": {
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "No negation flips detected",
+        "detail": {
+          "checked": 10
+        }
+      },
+      "hedging_preservation": {
+        "status": "FLAG",
+        "severity": "WARNING",
+        "reason": "Only 25.0% hedging preserved \u2014 claims may sound more definitive",
+        "detail": {
+          "original_hedges": [
+            "may",
+            "might",
+            "could",
+            "potentially"
+          ],
+          "missing": [
+            "may",
+            "might",
+            "potentially"
+          ]
+        }
+      },
+      "source_attribution": {
+        "status": "FLAG",
+        "severity": "INFO",
+        "reason": "Summary does not mention source (National Health Service (NHS), UK)",
+        "detail": {
+          "source": "National Health Service (NHS), UK"
+        }
+      },
+      "sentence_count": {
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "5 sentences \u2014 appropriate for summary length",
+        "detail": {
+          "sentence_count": 5
+        }
+      },
+      "semantic_similarity": {
+        "status": "FLAG",
+        "severity": "CRITICAL",
+        "reason": "Similarity 6.4% \u2014 possible hallucinated content",
+        "detail": {
+          "similarity_pct": 6.4
+        }
+      },
+      "sensitive_topics": {
+        "status": "PASS",
+        "severity": "INFO",
+        "reason": "No sensitive topics detected",
+        "detail": {}
+      }
+    },
+    "decision": "CRITICAL",
+    "review_reasons": [
+      "[CRITICAL] caveat_presence: Treatment content found but NO safety caveat in summary",
+      "[CRITICAL] semantic_similarity: Similarity 6.4% \u2014 possible hallucinated content",
+      "[WARNING] entity_coverage: Only 18.2% of entities preserved (9 missing)",
+      "[WARNING] hedging_preservation: Only 25.0% hedging preserved \u2014 claims may sound more definitive",
+      "[INFO] source_attribution: Summary does not mention source (National Health Service (NHS), UK)"
+    ],
+    "generation_time": 313.2
   }
 ]
