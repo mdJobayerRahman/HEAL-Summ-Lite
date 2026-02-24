@@ -83,7 +83,7 @@ heal-summ-lite/
 
 ## Tool Use Disclosure
 
-- My planning was done with Google Studio and Gemini. It served in brainstorming the clinical risk rules. It also helped structure the logic for the human review steps.
+- My planning was done with Google Studio and Gemini 3 pro. It served in brainstorming the clinical risk rules. It also helped structure the logic for the human review steps.
 - The Python code was written with some help from Claude Opus 4.6. It was very useful for the test pipeline and to make the pandas data outputs look right. I also needed it to find and fix bugs in my logic loops.
 - To see how good my work was, I used ChatGPT version 5.2 for a strict comparison. I just wanted to evaluate how a system handles the full health texts next to my small Phi-3 setup that runs on my own computer.
 
